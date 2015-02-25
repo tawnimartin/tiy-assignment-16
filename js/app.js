@@ -13,7 +13,7 @@ var App = (function() {
     //str to hold html output    
     var str = "";
     _.each(this.data, function(sect) {
-      //get section id, and put in header div data
+      //get section id, and put in header div data element
       var sectId = sect.section_id;
       str += "<div class='section-header' data-sect-name='" + sectId + "'>";
 
@@ -28,7 +28,7 @@ var App = (function() {
       });
       //close
       str += "</div>"
-      //output in .section container div
+      //put html string into .section div to render all the sections from our data
       $(".section").html( str );
 
     },
@@ -55,7 +55,7 @@ var App = (function() {
       });
     }
   }
-  
+
   return App;
 
 })();
